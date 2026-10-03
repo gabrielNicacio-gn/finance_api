@@ -1,0 +1,15 @@
+networks:
+  finance_netowrk:
+    driver: brige
+
+services:
+  db:
+    image: postgres:16.4
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
+      POSTGRES_DB:
+    networks:
+      - finance_netowrk
