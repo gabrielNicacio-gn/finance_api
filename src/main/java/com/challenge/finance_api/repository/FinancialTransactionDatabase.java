@@ -17,6 +17,7 @@ public class FinancialTransactionDatabase {
 
     public FinancialTransaction addTransaction(FinancialTransaction transaction){
         UUID transactionId = UUID.randomUUID();
+        transaction.setTransactionalId(transactionId);
         dataTransaction.put(transactionId, transaction);
         return dataTransaction.get(transactionId);
     }

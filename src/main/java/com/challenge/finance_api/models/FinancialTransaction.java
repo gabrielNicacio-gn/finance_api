@@ -11,13 +11,12 @@ import java.util.UUID;
 @Getter
 @Setter
 public class FinancialTransaction {
-
+    private UUID transactionalId;
     private LocalDateTime dateTransactional;
 
     private BigDecimal valueTransactional;
 
     public FinancialTransaction(){
-
         dateTransactional = LocalDateTime.now();;
     }
 }

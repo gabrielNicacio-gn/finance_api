@@ -19,6 +19,6 @@ public class CreateNewTransactionalUseCase {
         FinancialTransaction newTransactional = new FinancialTransaction();
         newTransactional.setValueTransactional(dto.valueTransactional());
         FinancialTransaction savedTransactional = database.addTransaction(newTransactional);
-        return new ResponseCreateTransactionalDto(savedTransactional.getValueTransactional(),savedTransactional.getDateTransactional());
+        return new ResponseCreateTransactionalDto(savedTransactional.getTransactionalId(),savedTransactional.getValueTransactional(),savedTransactional.getDateTransactional());
     }
 }
